@@ -34,8 +34,8 @@ class NagiosHarder
       @version = version
       debug_output if ENV['DEBUG']
       basic_auth(@user, @password) if @user && @password
-      @nagios_time_format = if nagios_time_format == 'us'
-         "%m-%d-%Y %H:%M:%S"
+      @nagios_time_format = if nagios_time_format == 'en-GB'
+         "%d-%m-%Y %H:%M:%S"
       else
         if @version.to_i < 3
           "%m-%d-%Y %H:%M:%S"
