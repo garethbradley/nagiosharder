@@ -476,6 +476,7 @@ class NagiosHarder
           debug 'parsed status column'
 
           # Last Check
+          puts "nagiosharder: using nagios_time_format of #{nagios_time_format} on date #{columns[3].inner_html}"
           last_check = if columns[3] && columns[3].inner_html != 'N/A'
                          last_check_str = columns[3].inner_html
                          debug "Need to parse #{columns[3].inner_html} in #{nagios_time_format}"
